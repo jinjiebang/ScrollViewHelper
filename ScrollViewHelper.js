@@ -109,7 +109,8 @@ cc.Class({
 
         const items = this.items
         const isDown = this.scrollView.content.y < this.lastContentPosY
-        // 缓冲区高度，item总是上移或下移一个缓冲区高度
+        // offset为缓冲区高度，item总是上移或下移一个缓冲区高度
+        // BufferZone和-BufferZone为ScrollView中，缓冲区上边界和下边界的位置
         const offset = (this.itemHeight + this.spacing) * this.cacheRow
         let newY = 0
 
