@@ -101,9 +101,7 @@ cc.Class({
     },
 
     // content位置改变时调用，根据滚动位置动态更新item的坐标和显示(所以spawnCount可以比totalCount少很多)
-    _updateContentView () {
-        console.log('this.canUpdateFrame:', this.canUpdateFrame)
-        
+    _updateContentView () {        
         if (!this.isInit || !this.canUpdateFrame) {
             return // we don't need to do the math every frame
         }
